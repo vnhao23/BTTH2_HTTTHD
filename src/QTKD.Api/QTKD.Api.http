@@ -1,0 +1,13 @@
+@host = http://localhost:5004
+
+### Danh sách khách hàng (mong đợi 200, 2 bản ghi)
+GET {{host}}/api/customers
+Accept: application/json
+
+### Hợp đồng HD-2026-018 (mong đợi 200, Status = Draft)
+GET {{host}}/api/contracts/1
+Accept: application/json
+
+### Hợp đồng không tồn tại (mong đợi 404)
+GET {{host}}/api/contracts/999
+Accept: application/json
